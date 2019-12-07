@@ -188,6 +188,14 @@ describe "String" do
       "hello"[1, 3]?.should eq("ell")
       "hello"[6, 3]?.should be_nil
     end
+
+    it "gets with range without end" do
+      "há日本語"[1..nil]?.should eq("á日本語")
+    end
+
+    it "gets with range without beginning" do
+      "há日本語"[nil..2]?.should eq("há日")
+    end
   end
 
   describe "byte_slice" do
