@@ -196,6 +196,7 @@ describe "String" do
 
     it "gets with range without beginning" do
       "hello"[nil..2]?.should eq("hel")
+      "hello"[nil...0]?.should eq("")
     end
   end
 
