@@ -757,7 +757,7 @@ class String
   # ```
   # "hello"[6..7]? # => nil
   # ```
-  def []?(range : Range(Int, Int))
+  def []?(range : Range)
     self[*Indexable.range_to_index_and_count(range, size)]?
   end
 
