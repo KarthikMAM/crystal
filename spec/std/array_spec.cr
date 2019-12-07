@@ -289,6 +289,7 @@ describe "Array" do
 
     it "gets with range without beginning" do
       [1, 2, 3][nil..1]?.should eq([1, 2])
+      [1, 2, 3][nil...0]?.should eq([])
     end
   end
 
